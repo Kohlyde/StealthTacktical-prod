@@ -1,0 +1,469 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class='svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='auto'
+    width='100vh' viewBox='0 0 1920 3800' preserveAspectRatio='xMinYMin slice'>
+    <title>𝕾𝖙𝖊𝖆𝖑𝖙𝖍 𝕿𝖆𝖈𝖙𝖎𝖐𝖆𝖑</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&#38;display=swap');
+
+        .svg {
+            position: relative !important;
+            width: 100%;
+            height: auto !important;
+            left: 0 !important;
+            top: 0 !important;
+            padding: 0;
+            fill: black !important;
+            background-size: cover;
+            padding-bottom: 10% !important;
+        }
+
+        .text {
+            font-family: Roboto, sans-serif, regular;
+            font-weight: 300;
+            font-size: 14px;
+            fill: white;
+            color: white;
+        }
+
+        .text:hover {
+            fill: #00b7ff;
+        }
+
+        .cards {
+            stroke: #2b2b2b;
+        }
+
+        .cards:hover {
+            stroke: #ffd209;
+            transition-duration: .1s;
+            transition-delay: .05s;
+            stroke-width: 1px;
+            fill: #111111
+        }
+
+        .introanimation:hover {
+            animation: swapper .6s .1s linear forwards;
+            animation-timing-function: cubic-bezier(.5s, 8s, 9s, 1s);
+            animation-iteration-count: 2;
+        }
+
+        .top-bar {
+            background-image: linear-gradient(90deg, #010101, #202020, #010101);
+        }
+
+        @keyframes swapper {
+            0% {
+                stroke: #f702f7;
+                stroke-width: 1px !important;
+            }
+
+            69% {
+                stroke: #ffd209;
+                stroke-width: 2px !important;
+            }
+
+            70% {
+                stroke: #f702f7;
+                stroke-width: 1px !important;
+            }
+
+            90% {
+                stroke: #ffd209;
+            }
+
+            100% {
+                stroke: #f702f7;
+                stroke-width: 2px !important;
+            }
+        }
+
+        text {
+            font-family: Roboto, sans-serif, regular;
+            font-weight: 300;
+            font-size: 14px;
+            fill: #fff;
+            color: #fff
+        }
+
+        .prefix__cards:hover {
+            stroke: #ffd209;
+            transition-duration: .1s;
+            transition-delay: .05s;
+            stroke-width: 1px;
+            fill: #3b3232
+        }
+
+        .prefix__text:hover {
+            fill: #ffd209
+        }
+
+        .prefix__introanimation:hover {
+            animation: swapper .1s linear forwards;
+            animation-timing-function: cubic-bezier(.5s, 8s, 9s, 1s);
+            animation-iteration-count: 2
+        }
+
+        .prefix__top-bar {
+            background-image: linear-gradient(90deg, #010101, #333, #010101)
+        }
+
+        /* Add scrolling */
+        svg {
+            overflow-y: scroll;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100%;
+            background-color: #222;
+            overflow-y: auto;
+            padding-top: 20px;padding : 0px 0px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Toggle button */
+        .toggle-btn {
+            cursor: pointer;
+            fill: #363636;
+        }
+
+        .toggle-btn.on {
+            fill: yellow;
+        }
+
+        .toggle-btn.off {
+            fill: magenta;
+        }
+
+        /* Slider button */
+        .slider-btn {
+            cursor: pointer;
+            fill: #222;
+        }
+
+        .slider-btn.active {
+            fill: #363636;
+        }
+    </style>
+
+    <!-- Definitions for reusable elements -->
+    <defs>
+        <a href='#' class='STEALTH'><text id='tacktical'></text></a>
+        <path id='b' d='M0 0h214v28H10V0z' />
+        <path id='c' d='M0 0h1920v73H0V0z' />
+        <path id='a' d='M0 0h1920v4000H0z' />
+        <path id='z' d='M0 0L510 0L510 370L0 370L0 0Z' />
+        <linearGradient id='MyGradient'>
+            <stop offset='0%' stop-color='#111' />
+            <stop offset='35%' stop-color='#333' />
+            <stop offset='65%' stop-color='#333' />
+            <stop offset='90%' stop-color='#111' />
+        </linearGradient>
+
+        <g id="LT1">
+            <rect x="0" y="0" width="214" height="28" fill="#1A1A1A" rx="10" ry="10" />
+            <text class="text" x="30" y="20"></text>
+            <text class="icon" x="190" y="20">&#xf015;</text>
+        </g>
+
+        <!-- Toggle button -->
+        <g id="toggle-btn">
+            <circle cx="15" cy="15" r="10" class="toggle-btn off" />
+        </g>
+
+        <!-- Slider button -->
+        <g id="slider-btn">
+            <rect x="0" y="0" width="20" height="50" class="slider-btn" />
+        </g>
+    </defs>
+
+    <!-- Background rectangle -->
+    <use fill='#000000' xlink:href='#a' />
+
+    <!-- Top bar -->
+    <path fill='#f702f7' d='M232 43h1920v72H232V43z' />
+    <path d='M0 0h232v4000H0V0z' class='sidebar' />
+    <!-- Gradient and stealth text -->
+    <use xlink:href='#c' fill='url(#MyGradient)' />
+    <use xlink:href='#tacktical' class='STEALTH' height='10%' style='position:relative' width='20%' fill='white' x='10'
+        y='5' />
+
+    <!-- Dynamic Links Placeholder -->
+    <g id="links-placeholder"></g>
+    <g>
+        <!-- Card elements 1-->
+        <g transform='translate(240 125)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="1650" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+            <text id="typewriter" x="825" y="200" class="text" text-anchor="middle" alignment-baseline="middle"></text>
+        </g>
+        <!-- Card elements 2-->
+        <g transform='translate(240 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 3-->
+        <g transform='translate(1350 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 4 -->
+        <g transform='translate(795 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+    </g>
+
+    <g transform='translate(0 820)'>
+        <!-- Card elements 1-->
+        <g transform='translate(240 125)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="1650" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 2-->
+        <g transform='translate(240 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 3-->
+        <g transform='translate(1350 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 4 -->
+        <g transform='translate(795 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+
+    </g>
+    <g transform='translate(0 1640)'>
+        <!-- Card elements 1-->
+        <g transform='translate(240 125)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="1650" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 2-->
+        <g transform='translate(240 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 3-->
+        <g transform='translate(1350 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 4 -->
+        <g transform='translate(795 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+
+    </g>
+
+    <g transform='translate(0 2460)'>
+        <!-- Card elements 1-->
+        <g transform='translate(240 125)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="1650" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 2-->
+        <g transform='translate(240 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 3-->
+        <g transform='translate(1350 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+        <!-- Card elements 4 -->
+        <g transform='translate(795 535)'>
+            <use xlink:href='#toggle-btn' transform='translate(10, 10)' />
+            <use xlink:href='#slider-btn' transform='translate(1650, 10)' />
+            <rect x="0" y="0" width="540" height="400" fill="#0a0a0a" class='cards introanimation' rx="10" ry="10" />
+        </g>
+
+    </g>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js'
+        integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+        <![CDATA[
+        // Ensure the script is executed only once
+        if (!window.dynamicLinksLoaded) {
+            window.dynamicLinksLoaded = true;
+
+            try {
+                const links = [
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 102 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 142 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 182 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 222 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 262 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 302 },
+                    { id: "LT1", name: "SETTINGS", icon: "\uf013", y: 342 },
+                    { id: "LT1", name: "REPORTS", icon: "\uf0c6", y: 382 },
+                    { id: "LT1", name: "USERS", icon: "\uf007", y: 422 },
+                    { id: "LT1", name: "ANALYTICS", icon: "\uf080", y: 462 },
+                    { id: "LT1", name: "NOTIFICATIONS", icon: "\uf0f3", y: 502 },
+                    { id: "LT1", name: "LOGS", icon: "\uf02d", y: 542 },
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 582 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 622 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 662 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 702 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 742 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 782 },
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 822 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 862 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 902 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 942 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 982 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 1022 },
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 1062 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 1102 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 1142 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 1182 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 1222 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 1262 },
+                    { id: "LT1", name: "SETTINGS", icon: "\uf013", y: 1302 },
+                    { id: "LT1", name: "REPORTS", icon: "\uf0c6", y: 1342 },
+                    { id: "LT1", name: "USERS", icon: "\uf007", y: 1382 },
+                    { id: "LT1", name: "ANALYTICS", icon: "\uf080", y: 1422 },
+                    { id: "LT1", name: "NOTIFICATIONS", icon: "\uf0f3", y: 1462 },
+                    { id: "LT1", name: "LOGS", icon: "\uf02d", y: 1502 },
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 1542 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 1582 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 1622 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 1662 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 2002 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 2042 },
+                    { id: "LT1", name: "HOME", icon: "\uf015", y: 2082 },
+                    { id: "LT1", name: "DASHBOARD", icon: "\uf0e4", y: 2122 },
+                    { id: "LT1", name: "DATA VISUALIZATION", icon: "\uf200", y: 2162 },
+                    { id: "LT1", name: "COMMUNIQUÉ", icon: "\uf674", y: 2202 },
+                    { id: "LT1", name: "CODE EDITOR", icon: "\uf044", y: 2242 },
+                    { id: "LT1", name: "SQL PORTFOLIO", icon: "\uf1c0", y: 2282 }
+                ];
+
+                const svgNS = "http://www.w3.org/2000/svg";
+                const xlinkNS = "http://www.w3.org/1999/xlink";
+                const placeholder = document.getElementById("links-placeholder");
+
+                links.forEach(link => {
+                    try {
+                        const useElement = document.createElementNS(svgNS, "use");
+                        useElement.setAttributeNS(xlinkNS, "href", `#${link.id}`);
+                        useElement.setAttributeNS(null, "transform", `translate(1.5, ${link.y})`);
+                        placeholder.appendChild(useElement);
+
+                        const textName = document.createElementNS(svgNS, "text");
+                        textName.setAttributeNS(null, "x", "30");
+                        textName.setAttributeNS(null, "y", link.y + 20);
+                        textName.setAttributeNS(null, "class", "text");
+                        textName.textContent = link.name;
+                        placeholder.appendChild(textName);
+
+                        const textIcon = document.createElementNS(svgNS, "text");
+                        textIcon.setAttributeNS(null, "x", "190");
+                        textIcon.setAttributeNS(null, "y", link.y + 20);
+                        textIcon.setAttributeNS(null, "class", "icon");
+                        textIcon.textContent = link.icon;
+                        placeholder.appendChild(textIcon);
+                    } catch (error) {
+                        console.error("Error creating link element:", error);
+                    }
+                });
+
+                // Add event listeners for toggle and slider buttons
+                document.querySelectorAll('.toggle-btn').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        try {
+                            if (this.classList.contains('off')) {
+                                this.classList.remove('off');
+                                this.classList.add('on');
+                            } else {
+                                this.classList.remove('on');
+                                this.classList.add('off');
+                            }
+                        } catch (error) {
+                            console.error("Error toggling button state:", error);
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.slider-btn').forEach(btn => {
+                    btn.addEventListener('mousedown', function () {
+                        try {
+                            this.classList.add('active');
+                        } catch (error) {
+                            console.error("Error activating slider button:", error);
+                        }
+                    });
+
+                    btn.addEventListener('mouseup', function () {
+                        try {
+                            this.classList.remove('active');
+                        } catch (error) {
+                            console.error("Error deactivating slider button:", error);
+                        }
+                    });
+                });
+
+                // Typewriter effect
+                const typewriterText = "Welcome to the stealth tactical dashboard";
+                let typewriterIndex = 0;
+                const typewriterElement = document.getElementById("typewriter");
+
+                function typeWriter() {
+                    if (typewriterIndex < typewriterText.length) {
+                        typewriterElement.textContent += typewriterText.charAt(typewriterIndex);
+                        typewriterIndex++;
+                        setTimeout(typeWriter, 100);
+                    }
+                }
+
+                typeWriter();
+
+            } catch (error) {
+                console.error("Error initializing links:", error);
+            }
+        } 
+        ]]>
+    </script>
+</svg>
